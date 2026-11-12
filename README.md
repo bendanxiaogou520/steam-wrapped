@@ -1,13 +1,13 @@
 <div align="center">
 
-# 玽游 · Gouyou
+# Steam Wrapped
 
-**把 Steam 上的一千多个小时，做成每年一份的年报**
-*Turn your Steam hours into a yearly wrapped.*
+**Turn your Steam hours into a yearly wrapped.**
+**把 Steam 上的上千小时，做成每年一份的年报。**
 
 [中文](#中文) · [English](#english)
 
-[**⬇ 下载最新版 / Download**](https://github.com/bendanxiaogou520/gouyou-dl/releases/latest/download/gouyou.apk)
+[**⬇ 下载最新版 / Download**](https://github.com/bendanxiaogou520/steam-wrapped/releases/latest/download/steam-wrapped.apk)
 
 </div>
 
@@ -52,6 +52,8 @@
 | v0.7.0 | 2026-11-12 | 年报首屏重做：封面墙 |
 | v0.6.2 | 2026-11-12 | 年报首屏重做 + 修「点不进去」 |
 
+> 原名「玽游」，取自作者网名。仓库用了通用名方便检索；**App 内部名字没改，装完后手机图标上仍显示「玽游」**。
+
 ---
 
 ## English
@@ -93,4 +95,4 @@ Only the latest three builds are kept here; older ones are removed on purpose.
 | v0.7.0 | 2026-11-12 | Wrapped first screen rebuilt: cover wall |
 | v0.6.2 | 2026-11-12 | Wrapped rebuild + fixed unclickable card |
 
-<sub>作者 / Author: 笨蛋小玽 · 自用工具，顺手公开 / A personal tool, published on a whim</sub>
+<sub>Formerly 玽游, named after the author's handle. Renamed so other people can use it without the personal name.</sub>
