@@ -28,11 +28,12 @@
 | 总览 | 总时长、游戏款数、成就数、最近在玩 |
 | 年报 | 一整屏的年度总结：封面墙、Steam 官方年度时长、你的年度之最 |
 | 游戏详情 | 时长、成就完成度、全球稀有度、游戏简介 |
+| 碑林 | 满成就 / 稀有成就（<5%）/ 最近解锁（可展开全部） |
 | 年谱 | 按年份回看你玩过什么 |
 
 ### 怎么装
 
-1. 点上面的 **下载最新版**（约 1.3 MB）
+1. 点上面的 **下载最新版**（约 2.4 MB）
 2. 手机提示「不允许安装未知应用」→ 这一次允许
 3. 装完打开就能用
 
@@ -40,7 +41,7 @@
 
 ### 数据从哪来
 
-读你自己电脑上的 Steam 本地记录（`localconfig.vdf`），通过 adb 推到手机。全程不经过任何服务器，也没有账号体系。
+读你自己电脑上的 Steam 本地记录（`localconfig.vdf` 和成就缓存），通过 adb 推到手机。全程不经过任何服务器，也没有账号体系 —— 不登录 Steam、不上传任何游戏数据。
 
 ### 版本
 
@@ -48,9 +49,11 @@
 
 | 版本 | 日期 | 变化 |
 | --- | --- | --- |
-| **v0.7.2** | 2026-11-12 | 年报改用 Steam 官方真实年度时长（最新） |
-| v0.7.0 | 2026-11-12 | 年报首屏重做：封面墙 |
-| v0.6.2 | 2026-11-12 | 年报首屏重做 + 修「点不进去」 |
+| **v1.1.7** | 2026-11-20 | 修成就图标加载慢：图床顺序反了，每条先吃一次 404（最新） |
+| v1.1.6 | 2026-11-18 | 修新游戏成就没图标：完整 URL 也要能换图床兜底 |
+| v1.1.4 | 2026-11-17 | 碑林重做：最近解锁 30 条 + 展开全部；修刷新后碑林不重画 |
+
+> **v0.7.2 → v1.1.7 之间发生了什么**：接入 Xbox / Game Pass 游戏（靠启动器自己计时，因为微软不记这两款的时长）、加「碑林」成就展馆、修稀有度全 0%、把同步脚本并成一个 bat。版本号从 0.7 跳到 1.1 就是因为这几块是新功能，不只是修 bug。
 
 > 原名「玽游」，取自作者网名。仓库用了通用名方便检索；**App 内部名字没改，装完后手机图标上仍显示「玽游」**。
 
@@ -71,11 +74,12 @@ The UI borrows from Xiaheihe, the official Steam app and PS5, and fixes a few th
 | Overview | Total hours, game count, achievements, recently played |
 | Wrapped | Full-screen yearly recap: cover wall, Steam's official annual hours, your year's bests |
 | Game detail | Playtime, achievement completion, global rarity, store description |
+| Hall of fame | Perfect games, rare achievements (<5%), latest unlocks with expand-all |
 | Timeline | Browse what you played, year by year |
 
 ### Install
 
-1. Download the APK above (~1.3 MB)
+1. Download the APK above (~2.4 MB)
 2. Allow "install unknown apps" once when prompted
 3. Open it — that's it
 
@@ -83,7 +87,7 @@ The UI borrows from Xiaheihe, the official Steam app and PS5, and fixes a few th
 
 ### Where the data comes from
 
-It reads `localconfig.vdf` from your own PC's Steam install and pushes it to the phone over adb. No server, no account, no telemetry — nothing leaves your devices.
+It reads `localconfig.vdf` and your achievement cache from your own PC's Steam install, then pushes them to the phone over adb. No server, no account, no telemetry — nothing leaves your devices.
 
 ### Versions
 
@@ -91,8 +95,10 @@ Only the latest three builds are kept here; older ones are removed on purpose.
 
 | Version | Date | Notes |
 | --- | --- | --- |
-| **v0.7.2** | 2026-11-12 | Wrapped now uses Steam's official annual hours (latest) |
-| v0.7.0 | 2026-11-12 | Wrapped first screen rebuilt: cover wall |
-| v0.6.2 | 2026-11-12 | Wrapped rebuild + fixed unclickable card |
+| **v1.1.7** | 2026-11-20 | Fixed slow achievement icons: CDN order was reversed, every icon ate a 404 first (latest) |
+| v1.1.6 | 2026-11-18 | Fixed missing icons on newer games: full URLs now get a CDN fallback too |
+| v1.1.4 | 2026-11-17 | Hall of fame rebuilt: 30 recent unlocks + expand all |
+
+> **What happened between v0.7.2 and v1.1.7**: Xbox / Game Pass support (timed by the launcher, since Microsoft records no playtime for those titles), a full achievement hall, a global-rarity fix, and one merged sync script. The jump from 0.7 to 1.1 marks new features rather than bug fixes.
 
 <sub>Formerly 玽游, named after the author's handle. Renamed so other people can use it without the personal name.</sub>
